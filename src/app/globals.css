@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sunny-50: #fffef0;
+  --color-sunny-100: #fffbd4;
+  --color-sunny-300: #fef08a;
+  --color-sunny-400: #fdd835;
+  --color-sunny-500: #fbc02d;
+
+  --color-coral-50: #fff5f2;
+  --color-coral-100: #ffebe5;
+  --color-coral-200: #ffccbc;
+  --color-coral-300: #ffab91;
+  --color-coral-400: #ff6f61;
+  --color-coral-500: #e64a19;
+  --color-coral-600: #d84315;
+
+  --color-lavender-50: #faf5ff;
+  --color-lavender-100: #f3e8ff;
+  --color-lavender-300: #e9d5ff;
+  --color-lavender-400: #a855f7;
+  --color-lavender-500: #9333ea;
+
+  --color-mint-50: #f0fdf4;
+  --color-mint-100: #dcfce7;
+  --color-mint-200: #bbf7d0;
+  --color-mint-400: #4ade80;
+  --color-mint-500: #22c55e;
+  --color-mint-600: #16a34a;
+
+  --animate-fadeIn: fadeIn 0.25s ease-out forwards;
+  --animate-scaleUp: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  --animate-slideIn: slideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-beat: beat 2s ease-in-out infinite;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e293b; /* Slate-800 */
+}
+
+body {
+  background-color: #ffffff;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-col: columns;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* Slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* Slate-300 */
+  border-radius: 9999px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* Slate-400 */
+}
+
+/* Bright Pastels Styling utilities */
+.bg-pastel-sky { background-color: #E0F2FE; }
+.bg-pastel-yellow { background-color: #FEF08A; }
+.bg-pastel-orange { background-color: #FFEDD5; }
+.bg-pastel-green { background-color: #DCFCE7; }
+.bg-pastel-pink { background-color: #FCE7F3; }
+.bg-pastel-purple { background-color: #F3E8FF; }
+
+.text-vibrant-sky { color: #0284C7; }
+.text-vibrant-yellow { color: #EAB308; }
+.text-vibrant-orange { color: #F97316; }
+.text-vibrant-green { color: #22C55E; }
+.text-vibrant-pink { color: #EC4899; }
+.text-vibrant-purple { color: #A855F7; }
+
+/* Custom zoom utility */
+.zoom-image {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-image:hover {
+  transform: scale(1.15);
+}

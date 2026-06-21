@@ -1,0 +1,539 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "email": "admin@krishna.com",
+      "name": "Krishna Admin",
+      "role": "admin",
+      "mobileNumber": "8900989005",
+      "savedAddresses": [
+        {
+          "id": "addr-1781967726903",
+          "name": "Krishna Admin",
+          "mobile": "8900989005",
+          "email": "admin@krishna.com",
+          "flat": "scsc",
+          "street": "trs fscscs",
+          "landmark": "",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "pincode": "600100"
+        }
+      ],
+      "isSuspended": false,
+      "totpSecret": "KRIW E43O ON2W E4ZB JVEW K33O MVSX G",
+      "totpVerified": false
+    },
+    {
+      "id": "customer-1",
+      "email": "customer@gmail.com",
+      "name": "Naveen Kumar",
+      "role": "customer",
+      "mobileNumber": "9876543210",
+      "dob": "1998-05-15",
+      "gender": "Male",
+      "bio": "Avid writer, planner collector, and school supply enthusiast.",
+      "avatarUrl": "",
+      "savedAddresses": [
+        {
+          "id": "addr-1",
+          "name": "Naveen Kumar",
+          "mobile": "9876543210",
+          "email": "customer@gmail.com",
+          "flat": "Flat No. 3B, Sunshine Apartments",
+          "street": "Medavakkam High Road",
+          "landmark": "Near Vels Global School",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "pincode": "600100"
+        }
+      ],
+      "isSuspended": false
+    },
+    {
+      "id": "user-1781967513104",
+      "email": "nv01110612@gmail.com",
+      "name": "naveen kumar ",
+      "role": "customer",
+      "savedAddresses": [
+        {
+          "id": "addr-1781967552212",
+          "name": "naveen kumar ",
+          "mobile": "9360931606",
+          "email": "nv01110612@gmail.com",
+          "flat": "222",
+          "street": "TRS Mens-Hostel ,S.R.M Nagar Kattankulathur",
+          "landmark": "",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "pincode": "600100"
+        }
+      ],
+      "isSuspended": false,
+      "totpVerified": false
+    },
+    {
+      "id": "user-1781967908715",
+      "email": "test@gmail.com",
+      "name": "Test Customer",
+      "role": "customer",
+      "savedAddresses": [],
+      "isSuspended": false,
+      "totpVerified": false
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Classmate Long Notebook (Ruled, 172 Pages) - Pack of 6",
+      "description": "High-quality ruled notebooks perfect for school exercises, project notes, and general writing. Made with eco-friendly elemental chlorine-free paper.",
+      "category": "School Supplies",
+      "price": 280,
+      "originalPrice": 360,
+      "stockQuantity": 45,
+      "images": [
+        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Classmate",
+      "tags": [
+        "notebook",
+        "ruled",
+        "student",
+        "school"
+      ],
+      "specifications": {
+        "Pages": "172 Pages per book",
+        "Ruling Type": "Single Line Ruled",
+        "Dimensions": "24cm x 18cm",
+        "Paper Quality": "58 GSM"
+      },
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 15,
+      "reviews": [
+        {
+          "id": "rev-1",
+          "userName": "Arun M.",
+          "rating": 5,
+          "comment": "Excellent page quality, perfect for daily homework.",
+          "date": "2026-06-10"
+        },
+        {
+          "id": "rev-2",
+          "userName": "Sneha R.",
+          "rating": 4,
+          "comment": "Value pack is very cheap and notebook bindings are strong.",
+          "date": "2026-06-12"
+        }
+      ]
+    },
+    {
+      "id": "prod-2",
+      "name": "Reynolds Trimax Gold Liquid Gel Pen (Blue, Pack of 3)",
+      "description": "Enjoy feather-light writing with the Reynolds Trimax Liquid Gel Pen. Special fluid ink system guarantees skip-free writing and waterproof longevity.",
+      "category": "Writing Materials",
+      "price": 150,
+      "originalPrice": 180,
+      "stockQuantity": 119,
+      "images": [
+        "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Reynolds",
+      "tags": [
+        "pen",
+        "gel pen",
+        "trimax",
+        "writing",
+        "blue ink"
+      ],
+      "specifications": {
+        "Ink Color": "Blue",
+        "Tip Size": "0.5 mm",
+        "Features": "Waterproof Ink, Refillable",
+        "Body Material": "Plastic with Gold accents"
+      },
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 22,
+      "reviews": [
+        {
+          "id": "rev-3",
+          "userName": "Vijay K.",
+          "rating": 5,
+          "comment": "Write smoothly and ink lasts really long. Highly recommend!",
+          "date": "2026-06-08"
+        }
+      ]
+    },
+    {
+      "id": "prod-3",
+      "name": "Doms Aqua Non-Toxic Water Color Pens (24 Shades)",
+      "description": "Bright and vibrant watercolor sketch pens with high-grade food color inks. Perfect for drawing, sketching, and coloring activities. Child-safe and non-toxic.",
+      "category": "Art & Craft",
+      "price": 120,
+      "originalPrice": 150,
+      "stockQuantity": 30,
+      "images": [
+        "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Doms",
+      "tags": [
+        "color pens",
+        "sketch pens",
+        "art supplies",
+        "kids coloring"
+      ],
+      "specifications": {
+        "Shades": "24 Assorted Shades",
+        "Ink Type": "Water-based, non-toxic",
+        "Safety Certification": "EN-71 Certified"
+      },
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.5,
+      "reviewsCount": 8,
+      "reviews": []
+    },
+    {
+      "id": "prod-4",
+      "name": "Faber-Castell Creative Studio Oil Pastels (36 Colors)",
+      "description": "Vibrant, thick pastels that offer smooth laydown and easy blending. Perfect for building secondary colors, scraping techniques, and multi-color overlay.",
+      "category": "Art & Craft",
+      "price": 250,
+      "originalPrice": 320,
+      "stockQuantity": 25,
+      "images": [
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Faber-Castell",
+      "tags": [
+        "pastels",
+        "oil pastels",
+        "crayons",
+        "drawing",
+        "blending"
+      ],
+      "specifications": {
+        "Colors": "36 rich color sticks",
+        "Includes": "Scraping tool & blending guide",
+        "Material": "Wax-based organic colors"
+      },
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.7,
+      "reviewsCount": 19,
+      "reviews": []
+    },
+    {
+      "id": "prod-5",
+      "name": "Premium Plush Teddy Bear (Pink, 40 cm)",
+      "description": "Super soft, huggable pink teddy bear with a beautiful satin ribbon. High-quality stuffing ensures shape retention. Made with child-friendly non-allergenic fabrics.",
+      "category": "Toys",
+      "price": 499,
+      "originalPrice": 799,
+      "stockQuantity": 15,
+      "images": [
+        "https://images.unsplash.com/photo-1559251606-c623743a6d76?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "SoftToys",
+      "tags": [
+        "teddy bear",
+        "plush toy",
+        "gifts",
+        "soft toys",
+        "kids"
+      ],
+      "specifications": {
+        "Color": "Soft Pink",
+        "Height": "40 cm",
+        "Material": "Polyester fiber plush"
+      },
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.6,
+      "reviewsCount": 11,
+      "reviews": []
+    },
+    {
+      "id": "prod-6",
+      "name": "Educational Construction Blocks Set (120 Pieces)",
+      "description": "Develop motor skills, logic, and creativity in children. Assorted colors and shapes of locking blocks. Includes simple builder guide manual.",
+      "category": "Toys",
+      "price": 350,
+      "originalPrice": 450,
+      "stockQuantity": 20,
+      "images": [
+        "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "BuildIt",
+      "tags": [
+        "blocks",
+        "educational",
+        "creative toys",
+        "puzzle",
+        "legos"
+      ],
+      "specifications": {
+        "Piece Count": "120 pieces",
+        "Age Recommendation": "3+ years",
+        "Material": "BPA-free ABS plastic"
+      },
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.4,
+      "reviewsCount": 6,
+      "reviews": []
+    },
+    {
+      "id": "prod-7",
+      "name": "JK Easy Copier A4 Paper Bundle (75 GSM, 500 Sheets)",
+      "description": "Excellent brightness and high-opacity office copier papers. Ideal for double-sided photocopy, color printing, and general printer runs without paper jams.",
+      "category": "Office Supplies",
+      "price": 330,
+      "originalPrice": 380,
+      "stockQuantity": 60,
+      "images": [
+        "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "JK Paper",
+      "tags": [
+        "copier",
+        "a4 paper",
+        "office paper",
+        "printing bundle"
+      ],
+      "specifications": {
+        "Size": "A4 (210mm x 297mm)",
+        "GSM": "75 GSM",
+        "Sheets": "500 sheets pack"
+      },
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 30,
+      "reviews": []
+    },
+    {
+      "id": "prod-8",
+      "name": "Digital Color Laser Printing (Per Page)",
+      "description": "Crystal-clear color laser prints on premium 75 GSM paper. Suitable for certificates, school projects, documentation, and graphical charts.",
+      "category": "Services",
+      "price": 10,
+      "originalPrice": 15,
+      "stockQuantity": 9999,
+      "images": [
+        "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Krishna Digital",
+      "tags": [
+        "color printing",
+        "laser print",
+        "xerox service",
+        "school project"
+      ],
+      "specifications": {
+        "Print Speed": "Instant / Next day bulk",
+        "Printer Quality": "1200 DPI Laser Color",
+        "Paper Weight": "75 GSM (Default)"
+      },
+      "isFeatured": true,
+      "isActive": true,
+      "rating": 4.9,
+      "reviewsCount": 42,
+      "reviews": [
+        {
+          "id": "rev-4",
+          "userName": "Karthik S.",
+          "rating": 5,
+          "comment": "Best printing price in Medavakkam. Fast binding services too!",
+          "date": "2026-06-14"
+        }
+      ]
+    },
+    {
+      "id": "prod-9",
+      "name": "Professional Spiral Binding Service",
+      "description": "Durable plastic spiral rings with thick clear protective front sheets and heavy cardboard backing. Perfect for binding school project notes, practical record sheets, and corporate proposals.",
+      "category": "Services",
+      "price": 50,
+      "originalPrice": 70,
+      "stockQuantity": 9998,
+      "images": [
+        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60"
+      ],
+      "brand": "Krishna Binding",
+      "tags": [
+        "spiral binding",
+        "project work",
+        "records",
+        "school supplies"
+      ],
+      "specifications": {
+        "Capacity": "Up to 250 sheets",
+        "Cover Sheet": "Transparent PVC sheet",
+        "Spine material": "Flexible Plastic Coil"
+      },
+      "isFeatured": false,
+      "isActive": true,
+      "rating": 4.8,
+      "reviewsCount": 14,
+      "reviews": []
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1001",
+      "userId": "customer-1",
+      "userName": "Naveen Kumar",
+      "userEmail": "customer@gmail.com",
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Classmate Long Notebook (Ruled, 172 Pages) - Pack of 6",
+          "price": 280,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60"
+        },
+        {
+          "productId": "prod-2",
+          "name": "Reynolds Trimax Gold Liquid Gel Pen (Blue, Pack of 3)",
+          "price": 150,
+          "quantity": 2,
+          "image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60"
+        }
+      ],
+      "subtotal": 580,
+      "deliveryFee": 40,
+      "total": 620,
+      "address": {
+        "id": "addr-1",
+        "name": "Naveen Kumar",
+        "mobile": "9876543210",
+        "email": "customer@gmail.com",
+        "flat": "Flat No. 3B, Sunshine Apartments",
+        "street": "Medavakkam High Road",
+        "landmark": "Near Vels Global School",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600100"
+      },
+      "paymentMethod": "PhonePe",
+      "paymentStatus": "Paid",
+      "status": "Delivered",
+      "date": "2026-06-18T10:15:30.000Z"
+    },
+    {
+      "id": "ord-552343",
+      "userId": "user-1781967513104",
+      "userName": "naveen kumar ",
+      "userEmail": "nv01110612@gmail.com",
+      "items": [
+        {
+          "productId": "prod-2",
+          "name": "Reynolds Trimax Gold Liquid Gel Pen (Blue, Pack of 3)",
+          "price": 150,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=500&auto=format&fit=crop&q=60"
+        }
+      ],
+      "subtotal": 150,
+      "deliveryFee": 40,
+      "total": 190,
+      "address": {
+        "name": "naveen kumar ",
+        "mobile": "9360931606",
+        "email": "nv01110612@gmail.com",
+        "flat": "222",
+        "street": "TRS Mens-Hostel ,S.R.M Nagar Kattankulathur",
+        "landmark": "",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600100"
+      },
+      "paymentMethod": "GPay",
+      "paymentStatus": "Paid",
+      "status": "Processing",
+      "date": "2026-06-20T14:59:12.343Z"
+    },
+    {
+      "id": "ord-726964",
+      "userId": "admin-1",
+      "userName": "Krishna Admin",
+      "userEmail": "admin@krishna.com",
+      "items": [
+        {
+          "productId": "prod-9",
+          "name": "Professional Spiral Binding Service",
+          "price": 50,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=60"
+        }
+      ],
+      "subtotal": 50,
+      "deliveryFee": 40,
+      "total": 90,
+      "address": {
+        "name": "Krishna Admin",
+        "mobile": "8900989005",
+        "email": "admin@krishna.com",
+        "flat": "scsc",
+        "street": "trs fscscs",
+        "landmark": "",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600100"
+      },
+      "paymentMethod": "COD",
+      "paymentStatus": "Pending",
+      "status": "Processing",
+      "date": "2026-06-20T15:02:06.964Z"
+    }
+  ],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=60",
+      "category": "Store Front",
+      "caption": "Welcome to Krishna Students Printers & Stationery. Step inside to explore books, art tools, and toys."
+    },
+    {
+      "id": "gal-2",
+      "imageUrl": "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=800&auto=format&fit=crop&q=60",
+      "category": "Office Supplies",
+      "caption": "Fully stocked shelves with printer paper bundles, organizers, tapes, files, and binding supplies."
+    },
+    {
+      "id": "gal-3",
+      "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=60",
+      "category": "Art Corner",
+      "caption": "A rainbow of oil pastels, acrylic palettes, fine sketch liners, drawing boards, and canvas boards."
+    },
+    {
+      "id": "gal-4",
+      "imageUrl": "https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?w=800&auto=format&fit=crop&q=60",
+      "category": "Kids Toys",
+      "caption": "Explore soft teddy bears, building bricks, board puzzles, and delightful gifts for every age."
+    },
+    {
+      "id": "gal-5",
+      "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800&auto=format&fit=crop&q=60",
+      "category": "Printing & Xerox Hub",
+      "caption": "High-speed heavy xerox and color digital printing machines, spiral binding stations for records."
+    }
+  ],
+  "settings": {
+    "upiMobileNumber": "8900989005",
+    "adminEmail": "admin@krishna.com",
+    "whatsappNumber": "8900989005",
+    "storeAddress": "427/200B, Ground Floor, Medavakkam-Mambakkam Road, Near Vels Global School, Medavakkam, Chennai, Tamil Nadu 600100, India",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.378906950293!2d80.19047911482103!3d12.915509790892706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525ddc67b2d56d%3A0x2c89be1f6057a6e2!2sKrishna%20Students%20Printers%20%26%20Stationery%20Toys!5e0!3m2!1sen!2sin!4v1687258900000!5m2!1sen!2sin",
+    "promoPopupEnabled": false,
+    "promoPopupTitle": "📚 Back to School Mega Sale! 🎒",
+    "promoPopupText": "Get flat 20% discount on all Notebooks packs, crayons, geometry sets, and premium gel writing pens! Use code SCHOOLDAYS at checkout.",
+    "promoPopupImageUrl": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80"
+  }
+}

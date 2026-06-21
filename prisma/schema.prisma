@@ -1,0 +1,220 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                String    @id @default(uuid())
+  name              String?
+  email             String    @unique
+  emailVerified     DateTime?
+  image             String?
+  password          String?
+  role              Role      @default(CUSTOMER)
+  isActive          Boolean   @default(true)
+  resetToken        String?
+  resetTokenExpiry  DateTime?
+  lastResetRequest  DateTime?
+  loginAttempts     Int       @default(0)
+  lockUntil         DateTime?
+  totpEnabled       Boolean   @default(false)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  accounts          Account[]
+  sessions          Session[]
+
+  // Existing custom fields to keep
+  mobileNumber      String?
+  dob               String?
+  gender            String?
+  bio               String?
+  avatarUrl         String?
+  isSuspended       Boolean   @default(false)
+  totpSecret        String?
+  totpVerified      Boolean   @default(false)
+  
+  addresses         Address[]
+  orders            Order[]
+  loginLogs         LoginLog[]
+}
+
+model Address {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  mobile    String
+  email     String
+  flat      String
+  street    String
+  landmark  String?
+  city      String
+  state     String
+  pincode   String
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Product {
+  id             String      @id @default(uuid())
+  sku            String      @unique
+  name           String
+  description    String
+  price          Float
+  originalPrice  Float
+  stockQuantity  Int
+  category       String
+  brand          String
+  tags           String      // Comma-separated list for SQLite compatibility
+  specifications Json        // Stores Record<string, string>
+  images         String      // Comma-separated list for SQLite compatibility
+  isFeatured     Boolean     @default(false)
+  isActive       Boolean     @default(true)
+  rating         Float       @default(0.0)
+  reviewsCount   Int         @default(0)
+  
+  reviews        Review[]
+  orderItems     OrderItem[]
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  userName  String
+  rating    Int
+  comment   String
+  date      DateTime @default(now())
+}
+
+model Order {
+  id                 String      @id // ord-XXXXXX
+  userId             String
+  user               User        @relation(fields: [userId], references: [id])
+  userName           String
+  userEmail          String
+  items              OrderItem[]
+  subtotal           Float
+  deliveryFee        Float
+  total              Float
+  addressJson        Json        // Snapshot of Address
+  paymentMethod      String      // COD, Razorpay
+  paymentStatus      String      // Pending, Awaiting Payment, Paid, Failed, Refunded, Cancelled
+  status             String      // Pending Confirmation, Processing, Packed, Shipped, Delivered, Cancelled, Refunded
+  razorpayOrderId    String?     @unique
+  razorpayPaymentId  String?     @unique
+  razorpaySignature  String?
+  date               DateTime    @default(now())
+  updatedAt          DateTime    @updatedAt
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product? @relation(fields: [productId], references: [id])
+  name      String
+  price     Float
+  quantity  Int
+  image     String
+}
+
+model GalleryItem {
+  id        String   @id @default(uuid())
+  imageUrl  String
+  category  String
+  caption   String
+  createdAt DateTime @default(now())
+}
+
+model StoreSettings {
+  id                 String   @id @default("singleton")
+  upiMobileNumber    String
+  adminEmail         String
+  whatsappNumber     String
+  storeAddress       String
+  mapEmbedUrl        String
+  promoPopupEnabled  Boolean  @default(false)
+  promoPopupTitle    String
+  promoPopupText     String
+  promoPopupImageUrl String
+  
+  // COD controls
+  codEnabled         Boolean  @default(true)
+  codMinAmount       Float    @default(0)
+  codMaxAmount       Float    @default(5000)
+  codAllowedPincodes String   @default("") // Comma separated list (empty = all)
+  
+  // Additional banner/timings settings
+  topBannerText      String   @default("✨ Free delivery on stationery items for orders above ₹499! Use code HAPPY15 for 15% OFF! ✨")
+  storeTimings       String   @default("Daily: 7:30 AM – 11:30 PM")
+  
+  updatedAt          DateTime @updatedAt
+}
+
+model LoginLog {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ipAddress String?
+  device    String?
+  status    String   // SUCCESS, FAILED_CREDENTIALS, FAILED_2FA
+  createdAt DateTime @default(now())
+}
+
+model PaymentSettings {
+  id                      String   @id @default("singleton")
+  razorpayKeyId           String
+  razorpaySecretEncrypted  String
+  upiId                   String
+  merchantName            String
+  paymentMethods          String   @default("cod,razorpay")
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+}
+
+model Account {
+  id                String  @id @default(uuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+  @@unique([identifier, token])
+}
+
+enum Role {
+  CUSTOMER
+  ADMIN
+  SUPER_ADMIN
+  MANAGER
+}
+
